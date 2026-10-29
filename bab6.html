@@ -1,0 +1,596 @@
+﻿
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مٹی کے چراغ — باب ششم</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #14283f;
+    --blue: #244967;
+    --teal: #28a6a1;
+    --paper: #ffffff;
+    --soft: #edf4f7;
+    --text: #293746;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #dce6ec;
+    color: var(--text);
+    font-family: 'Noto Nastaliq Urdu', serif;
+    line-height: 2.5;
+}
+
+.toolbar {
+    direction: ltr;
+    text-align: center;
+    padding: 18px;
+    background: var(--navy);
+}
+
+.toolbar button {
+    border: 0;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: var(--teal);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.book {
+    max-width: 900px;
+    margin: 28px auto;
+    background: var(--paper);
+    box-shadow: 0 12px 40px #10283b20;
+}
+
+.cover {
+    min-height: 470px;
+    padding: 55px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background:
+      linear-gradient(145deg, rgba(12,32,53,.95), rgba(36,73,103,.83)),
+      url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Sheikhupura_fort_panorama.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 8px solid var(--teal);
+}
+
+.cover .small {
+    font-size: 17px;
+    color: #9ce8df;
+}
+
+.cover h1 {
+    font-size: clamp(34px, 6vw, 58px);
+    margin: 18px 0;
+    line-height: 1.9;
+}
+
+.cover h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.cover .line {
+    width: 100px;
+    height: 4px;
+    background: var(--teal);
+    margin: 22px auto;
+    border-radius: 10px;
+}
+
+.cover p {
+    font-size: 16px;
+}
+
+.content {
+    padding: 35px 8%;
+}
+
+.chapter-heading {
+    text-align: center;
+    padding: 25px 10px;
+    margin-bottom: 35px;
+    background: var(--soft);
+    border-right: 6px solid var(--teal);
+}
+
+.chapter-heading .number {
+    color: var(--teal);
+    font-size: 17px;
+}
+
+.chapter-heading h2 {
+    color: var(--navy);
+    font-size: 30px;
+    margin: 8px 0;
+    line-height: 2;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+    margin: 0 0 23px;
+}
+
+.scene-title {
+    color: var(--blue);
+    font-size: 22px;
+    margin: 38px 0 15px;
+    padding-right: 13px;
+    border-right: 4px solid var(--teal);
+}
+
+.photo-card {
+    margin: 32px 0;
+    background: #f0f5f7;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #dce6ec;
+    break-inside: avoid;
+}
+
+.photo-card a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.photo-card img {
+    width: 100%;
+    max-height: 390px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-caption {
+    padding: 12px 18px;
+    font-size: 14px;
+    line-height: 2.1;
+    color: #43596a;
+}
+
+.photo-caption strong {
+    color: var(--navy);
+}
+
+.quote {
+    background: #eaf7f6;
+    border-right: 5px solid var(--teal);
+    margin: 30px 0;
+    padding: 20px 25px;
+    color: #183d4d;
+    font-size: 20px;
+    line-height: 2.5;
+    break-inside: avoid;
+}
+
+.mystery {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 22px 16px;
+    margin: 32px 0;
+    font-size: 21px;
+    line-height: 2.4;
+    break-inside: avoid;
+}
+
+.ending {
+    margin-top: 45px;
+    text-align: center;
+    color: var(--blue);
+    font-size: 22px;
+    padding: 20px;
+    border-top: 2px solid var(--teal);
+}
+
+.ending span {
+    display: block;
+    color: var(--teal);
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.footer {
+    background: var(--navy);
+    color: #dce8ef;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .book {
+        margin: 0;
+    }
+
+    .content {
+        padding: 25px 6%;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 2.5;
+    }
+
+    .cover {
+        min-height: 390px;
+    }
+
+    .chapter-heading h2 {
+        font-size: 24px;
+    }
+}
+
+@page {
+    size: A4;
+    margin: 15mm;
+}
+
+@media print {
+    body {
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .toolbar {
+        display: none !important;
+    }
+
+    .book {
+        margin: 0;
+        max-width: none;
+        box-shadow: none;
+    }
+
+    .cover {
+        min-height: 250mm;
+        page-break-after: always;
+    }
+
+    .photo-card,
+    .quote,
+    .mystery {
+        break-inside: avoid;
+    }
+
+    .photo-card img {
+        max-height: 250px;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="toolbar">
+    <button onclick="window.print()">📄 Save as PDF / Print</button>
+</div>
+
+<div class="book">
+
+    <section class="cover">
+        <div class="small">ایک سماجی اور جذباتی اردو ناول</div>
+        <h1>مٹی کے چراغ</h1>
+        <div class="line"></div>
+        <h2>باب ششم</h2>
+        <p>پرانی لائبریری کا دروازہ</p>
+        <p>رشتے، راز، تعلیم اور امید کی کہانی</p>
+    </section>
+
+    <main class="content">
+
+        <div class="chapter-heading">
+            <div class="number">باب ششم — چھٹی قسط</div>
+            <h2>ایک خط، کئی سوال</h2>
+        </div>
+
+        <p>
+        رات کا اندھیرا آہستہ آہستہ گہرا ہو رہا تھا۔ حمزہ اپنے کمرے میں بیٹھا والد کی پرانی تصویر کو دیکھ رہا تھا۔ تصویر کے کنارے وقت کے ساتھ زرد ہو چکے تھے، مگر اس میں موجود چہرے کی شفقت آج بھی ویسی ہی محسوس ہوتی تھی۔
+        </p>
+
+        <p>
+        اس کے ذہن میں ایک ہی سوال بار بار اٹھ رہا تھا۔ آخر ابا نے کس کی مدد کی تھی، اور وہ شخص آج تک اُن کا نام کیوں یاد رکھے ہوئے ہے؟
+        </p>
+
+        <p>
+        علی رضا نے فون پر اسے یاد دلایا تھا کہ وہ کسی نامعلوم شخص کی باتوں میں آ کر اکیلا کہیں نہ جائے۔ دونوں نے طے کیا کہ اگلے دن دن کی روشنی میں پرانی لائبریری جائیں گے اور پہلے وہاں کے نگراں سے معلومات حاصل کریں گے۔
+        </p>
+
+        <div class="scene-title">اکیڈمی میں ایک نئی گفتگو</div>
+
+        <p>
+        صبح حمزہ حسبِ معمول اکیڈمی پہنچا۔ بچوں کی آوازیں، تختۂ سیاہ پر چاک کی کھڑکھڑاہٹ اور چھوٹے چھوٹے ہاتھوں کا سوال پوچھنے کے لیے بلند ہونا اسے چند لمحوں کے لیے پریشانیوں سے دور لے گیا۔
+        </p>
+
+        <p>
+        کلاس ختم ہونے کے بعد وہ دفتر میں اپنی حاضری درج کروا رہا تھا کہ ایک مانوس آواز سنائی دی۔
+        </p>
+
+        <p>
+        "آپ حمزہ علی ہیں نا؟"
+        </p>
+
+        <p>
+        اس نے پلٹ کر دیکھا۔ یہ وہی لڑکی تھی جسے اس نے اکیڈمی میں بچوں کی مدد کرتے ہوئے دیکھا تھا۔
+        </p>
+
+        <p>
+        "جی، لیکن آپ نے میرا نام کیسے جانا؟"
+        </p>
+
+        <p>
+        لڑکی نے مسکرا کر جواب دیا، "میں عائشہ ہوں۔ اکیڈمی میں بچوں کو پڑھانے میں مدد کرتی ہوں۔ سر نے آپ کی تعریف کی تھی۔ کہتے ہیں آپ بچوں کو مشکل بات بھی آسانی سے سمجھا دیتے ہیں۔"
+        </p>
+
+        <p>
+        حمزہ کے چہرے پر ہلکی سی مسکراہٹ آ گئی۔
+        </p>
+
+        <p>
+        "بس کوشش کرتا ہوں کہ جو بات مجھے سمجھنے میں مشکل ہوئی، وہ کسی دوسرے کے لیے آسان بنا دوں۔"
+        </p>
+
+        <p>
+        عائشہ نے میز پر رکھی کاپیوں کی طرف اشارہ کیا۔
+        </p>
+
+        <div class="quote">
+        "علم صرف کتاب میں لکھا ہوا نہیں ہوتا، کبھی کسی کے سمجھانے کا انداز بھی انسان کی زندگی بدل دیتا ہے۔"
+        </div>
+
+        <p>
+        حمزہ چند لمحوں کے لیے خاموش ہو گیا۔ اسے اپنی ماں کی بات یاد آئی کہ انسان کے پاس دولت نہ ہو تو بھی وہ کسی کے لیے آسانی پیدا کر سکتا ہے۔ اسے پہلی بار محسوس ہوا کہ شاید اس کی زندگی صرف پریشانیوں کا نام نہیں۔
+        </p>
+
+        <div class="photo-card">
+            <a href="https://dpssheikhupura.pk/" target="_blank" rel="noopener">
+                <img
+                    src="https://dpssheikhupura.pk/uploads/frontend/home_page/wellcome58.jpg"
+                    alt="ڈسٹرکٹ پبلک اسکول شیخوپورہ کی عمارت"
+                    loading="lazy">
+                <div class="photo-caption">
+                    <strong>شیخوپورہ — تعلیم کی ایک جھلک</strong><br>
+                    ڈسٹرکٹ پبلک اسکول شیخوپورہ کی عمارت۔ تصویر پر کلک کرکے ادارے کی ویب سائٹ دیکھی جا سکتی ہے۔
+                </div>
+            </a>
+        </div>
+
+        <div class="scene-title">پرانی لائبریری کا راستہ</div>
+
+        <p>
+        دوپہر کے قریب حمزہ اور علی پرانی لائبریری پہنچ گئے۔ شہر کے پرانے حصے میں چلتے ہوئے حمزہ نے دکانوں، سڑکوں اور پرانی عمارتوں کو دیکھا۔ شیخوپورہ کی یہ گلیاں اسے اپنی زندگی جیسی لگیں؛ کچھ جگہوں پر وقت ٹھہر سا گیا تھا، اور کچھ جگہوں پر نئی امیدیں جنم لے رہی تھیں۔
+        </p>
+
+        <div class="photo-card">
+            <a href="https://upload.wikimedia.org/wikipedia/commons/6/6b/Sheikhupura_fort_panorama.jpg" target="_blank" rel="noopener">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Sheikhupura_fort_panorama.jpg"
+                    alt="شیخوپورہ قلعے کی تاریخی عمارت"
+                    loading="lazy">
+                <div class="photo-caption">
+                    <strong>شیخوپورہ کی تاریخی فضا</strong><br>
+                    شیخوپورہ قلعے کا منظر — ناول کے پرانے شہر اور ماضی کے رازوں کی فضا کے لیے۔
+                </div>
+            </a>
+        </div>
+
+        <p>
+        عمارت کی دیواروں پر نمی کے نشان تھے اور لکڑی کا بھاری دروازہ اپنی عمر کی کہانی سنا رہا تھا۔ اندر کتابوں کی مخصوص خوشبو پھیلی ہوئی تھی۔ چند بوڑھے افراد خاموشی سے مطالعہ کر رہے تھے۔
+        </p>
+
+        <p>
+        علی نے کاؤنٹر پر بیٹھے بزرگ سے پوچھا، "بابا جی، ہم ایک ایسے شخص کے بارے میں معلوم کرنا چاہتے ہیں جو کئی سال پہلے یہاں نوجوانوں کی مالی مدد کیا کرتا تھا۔ شاید اس کا تعلق ایک اسکول کے استاد سے بھی تھا۔"
+        </p>
+
+        <p>
+        بزرگ نے عینک درست کی اور غور سے دونوں کو دیکھا۔
+        </p>
+
+        <p>
+        "نام معلوم ہے؟"
+        </p>
+
+        <p>
+        حمزہ نے جواب دیا، "ابھی نہیں۔ لیکن میرے والد یہاں آیا کرتے تھے۔ ان کا نام علی احمد تھا۔"
+        </p>
+
+        <p>
+        یہ نام سنتے ہی بزرگ کے چہرے پر حیرت ابھری۔
+        </p>
+
+        <p>
+        "علی احمد؟ تم اُن کے بیٹے ہو؟"
+        </p>
+
+        <p>
+        حمزہ کے دل کی دھڑکن تیز ہو گئی۔
+        </p>
+
+        <p>
+        "جی، آپ میرے والد کو جانتے تھے؟"
+        </p>
+
+        <p>
+        بزرگ نے کرسی سے ٹیک لگائی اور کچھ دیر ماضی میں کھوئے رہے۔
+        </p>
+
+        <p>
+        "تمہارے والد اکثر یہاں آتے تھے۔ خاموش طبیعت کے آدمی تھے۔ ایک دفعہ وہ ایک نوجوان کو ساتھ لائے تھے۔ وہ نوجوان بہت پریشان تھا۔ اس کی تعلیم چھوٹ گئی تھی اور گھر کے حالات بھی اچھے نہیں تھے۔ تمہارے والد نے اس کی فیس ادا کی تھی۔"
+        </p>
+
+        <p>
+        حمزہ نے بے چینی سے پوچھا، "کیا آپ کو اس نوجوان کا نام یاد ہے؟"
+        </p>
+
+        <p>
+        بزرگ نے سر ہلایا۔
+        </p>
+
+        <p>
+        "پورا نام تو یاد نہیں، بیٹا۔ لیکن مجھے اتنا یاد ہے کہ وہ نوجوان جاتے ہوئے تمہارے والد سے کہہ رہا تھا کہ ایک دن وہ ان کا احسان ضرور لوٹائے گا۔ تمہارے والد نے جواب دیا تھا کہ احسان لوٹانا ہو تو کسی ضرورت مند کے کام آنا۔"
+        </p>
+
+        <p>
+        یہ الفاظ حمزہ کے دل میں اتر گئے۔ اس کے والد نے واقعی ایسا کہا تھا؟ وہ شخص کون تھا جو برسوں بعد بھی اس وعدے کو یاد رکھے ہوئے تھا؟
+        </p>
+
+        <div class="photo-card">
+            <a href="https://superiorskp.com/" target="_blank" rel="noopener">
+                <img
+                    src="https://superiorskp.com/images/about-image.jpg"
+                    alt="سپیریئر کالج شیخوپورہ کا کیمپس"
+                    loading="lazy">
+                <div class="photo-caption">
+                    <strong>سپیریئر کالج شیخوپورہ</strong><br>
+                    شہر کے تعلیمی ماحول کی ایک حقیقی تصویر۔ تصویر پر کلک کرکے کالج کی ویب سائٹ کھولیں۔
+                </div>
+            </a>
+        </div>
+
+        <div class="scene-title">لفافے میں چھپا ہوا ماضی</div>
+
+        <p>
+        بزرگ اچانک اٹھے اور کاؤنٹر کے پیچھے رکھی ایک پرانی دراز کھولنے لگے۔ کافی تلاش کے بعد انہوں نے ایک زرد لفافہ نکالا۔
+        </p>
+
+        <p>
+        "یہ کئی سالوں سے میرے پاس رکھا ہے۔ تمہارے والد نے کہا تھا کہ اگر کبھی ان کے گھر کا کوئی فرد یہاں آئے تو یہ اسے دے دوں۔ میں سمجھا تھا شاید کوئی نہیں آئے گا۔"
+        </p>
+
+        <p>
+        حمزہ کے ہاتھ کانپنے لگے۔
+        </p>
+
+        <p>
+        "میرے لیے؟"
+        </p>
+
+        <p>
+        "ہاں، بیٹا۔ مگر یاد رکھنا، ہر پرانا راز خوشی نہیں لاتا۔ بعض سچ انسان کو مضبوط بناتے ہیں اور بعض اس کے حوصلے کا امتحان لیتے ہیں۔"
+        </p>
+
+        <p>
+        حمزہ نے لفافہ کھولا۔ اندر ایک چھوٹا سا کاغذ تھا، جس پر اس کے والد کی لکھائی موجود تھی۔ اس نے آہستہ آہستہ پڑھنا شروع کیا۔
+        </p>
+
+        <div class="quote">
+        "اگر میرا بیٹا کبھی یہ خط پڑھے تو اسے بتا دینا کہ انسان کی اصل دولت وہ نہیں جو وہ اپنے لیے جمع کرتا ہے، بلکہ وہ ہے جو کسی کی زندگی سنوارنے میں خرچ کرتا ہے۔ اگر وہ نوجوان دوبارہ تمہاری زندگی میں آئے تو پہلے اس کے کردار کو پہچاننا، اس کے الفاظ کو نہیں۔"
+        </div>
+
+        <p>
+        خط کے نیچے صرف ایک جملہ مزید لکھا تھا:
+        </p>
+
+        <div class="quote">
+        "بشیر کو ایک موقع دیا تھا، مگر ہر موقع انسان کو نہیں بدلتا۔"
+        </div>
+
+        <p>
+        حمزہ کے ہاتھ سے کاغذ تقریباً چھوٹ گیا۔
+        </p>
+
+        <p>
+        "بشیر؟" علی نے حیرت سے کہا۔ "کیا یہ حاجی بشیر کی بات ہو رہی ہے؟"
+        </p>
+
+        <p>
+        حمزہ نے کوئی جواب نہ دیا۔ اس کے ذہن میں حاجی بشیر کا چہرہ گھوم رہا تھا، وہی شخص جو کبھی مدد کے نام پر مریم کے مستقبل کا سودا کرنے کی بات کر چکا تھا۔
+        </p>
+
+        <p>
+        کیا حاجی بشیر واقعی وہ نوجوان تھا جس کی اس کے والد نے مدد کی تھی؟ اور اگر ایسا تھا تو کیا وہ اپنا وعدہ پورا کرنے واپس آیا تھا، یا کسی اور مقصد کے لیے؟
+        </p>
+
+        <div class="photo-card">
+            <a href="https://gcbskp.edu.pk/" target="_blank" rel="noopener">
+                <img
+                    src="https://gcbskp.edu.pk/media/slider_images/cover1_yRfSGZn.jpg"
+                    alt="گورنمنٹ گریجویٹ کالج شیخوپورہ کا مرکزی دروازہ"
+                    loading="lazy">
+                <div class="photo-caption">
+                    <strong>گورنمنٹ گریجویٹ کالج، سول لائنز، شیخوپورہ</strong><br>
+                    شہر کی ایک اور حقیقی تعلیمی جگہ۔
+                </div>
+            </a>
+        </div>
+
+        <div class="scene-title">نامعلوم نمبر کا پیغام</div>
+
+        <p>
+        اسی لمحے حمزہ کے فون پر ایک پیغام آیا۔ نامعلوم نمبر سے صرف اتنا لکھا تھا:
+        </p>
+
+        <div class="mystery">
+        "تم نے خط پڑھ لیا ہے۔ اب فیصلہ تمہیں کرنا ہے کہ اپنے والد کی نیکی پر بھروسا کرو گے یا لوگوں کے بدلتے ہوئے چہروں سے سبق سیکھو گے۔"
+        </div>
+
+        <p>
+        علی نے پیغام پڑھا تو فوراً کہا، "اب ہمیں پہلے سے زیادہ احتیاط کرنی ہوگی۔ کوئی ہماری نقل و حرکت پر نظر رکھے ہوئے ہے۔"
+        </p>
+
+        <p>
+        حمزہ نے لفافہ واپس تہہ کیا اور اسے اپنی جیب میں رکھ لیا۔
+        </p>
+
+        <p>
+        "میں سچ جاننا چاہتا ہوں، علی۔ لیکن میں اپنے والد کی نیکی کو کسی کی غلط نیت کا بہانہ نہیں بننے دوں گا۔"
+        </p>
+
+        <p>
+        دونوں لائبریری سے باہر نکل آئے۔ دھوپ ابھی موجود تھی، مگر حمزہ کو محسوس ہو رہا تھا کہ اس کی زندگی کے گرد کوئی نیا سایہ پھیل رہا ہے۔
+        </p>
+
+        <p>
+        اسے معلوم نہیں تھا کہ اگلا قدم اسے کس طرف لے جائے گا۔ لیکن اب اس کے پاس ایک نام تھا: بشیر۔
+        </p>
+
+        <p>
+        اور ایک ایسا سوال، جس کا جواب شاید اس کے پورے خاندان کی زندگی بدل سکتا تھا۔
+        </p>
+
+        <div class="ending">
+            مٹی کے چراغ
+            <span>جاری ہے۔۔۔</span>
+        </div>
+
+    </main>
+
+    <div class="footer">
+        مٹی کے چراغ — ایک اصل اردو ناول
+        <br>
+        تصاویر متعلقہ ویب سائٹس سے لی گئی ہیں؛ ان کے حقوق متعلقہ مالکان کے پاس ہیں۔
+    </div>
+
+</div>
+
+<div class="chapter-nav" style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin:28px 0 18px; text-align:center;">
+  <a href="bab1.html" style="display:inline-block; padding:10px 18px; background:#176b45; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;">مرکزی صفحہ</a>  <a href="bab5.html" style="display:inline-block; padding:10px 18px; background:#f0f0f0; color:#1e1e1e; border:1px solid #d5d5d5; border-radius:6px; text-decoration:none; font-weight:600;">پچھلا باب</a>  <a href="bab7.html" style="display:inline-block; padding:10px 18px; background:#176b45; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;">اگلا باب</a></div>
+</body>
+</html>
+

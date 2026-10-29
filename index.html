@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مٹی کے چراغ | فہرست</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #176b45;
+      --green-dark: #104a31;
+      --bg: #f4efe7;
+      --card: #fffdf9;
+      --text: #1f1f1f;
+      --muted: #5e5e5e;
+      --line: #d9d0c1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #eae4d9 0%, #f9f6f1 100%);
+      color: var(--text);
+      font-family: 'Noto Nastaliq Urdu', serif;
+      line-height: 1.9;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 18px 70px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #173d2d 0%, #2b5b46 40%, #176b45 100%);
+      color: white;
+      border-radius: 20px;
+      padding: 34px 26px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(23, 107, 69, 0.18);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.5;
+    }
+
+    .hero p {
+      margin: 12px 0 0;
+      font-size: 18px;
+      color: #ebf5ef;
+    }
+
+    .chapters {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .chapter-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 16px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+    }
+
+    .chapter-card a {
+      text-decoration: none;
+      color: var(--green-dark);
+      display: block;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .chapter-card .meta {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .summary {
+      margin-top: 28px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px 24px;
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 22px 12px 50px; }
+      .hero { padding: 26px 18px; }
+      .chapter-card a { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>مٹی کے چراغ</h1>
+      <p>گھر، محبت، دکھ، امید اور سفر کی کہانی</p>
+    </header>
+
+    <div class="summary">
+      اس فہرست سے آپ ہر باب کو براہِ راست کھول سکتے ہیں۔
+    </div>
+
+    <main class="chapters">
+      <div class="chapter-card"><a href="bab1.html">باب اول</a><div class="meta">وہ رات جب چھت ٹپکتی رہی</div></div>
+      <div class="chapter-card"><a href="bab2.html">باب دوم</a><div class="meta">ایک سچا دوست</div></div>
+      <div class="chapter-card"><a href="bab3.html">باب سوم</a><div class="meta">ایک نئی ملاقات</div></div>
+      <div class="chapter-card"><a href="bab4.html">باب چہارم</a><div class="meta">امتحان کی پہلی گھڑی</div></div>
+      <div class="chapter-card"><a href="bab5.html">باب پنجم</a><div class="meta">ماضی کا ایک راز</div></div>
+      <div class="chapter-card"><a href="bab6.html">باب ششم</a><div class="meta">چھٹی قسط</div></div>
+      <div class="chapter-card"><a href="bab7.html">باب ہفتم</a><div class="meta">دل کی خاموش آواز</div></div>
+      <div class="chapter-card"><a href="bab8.html">باب ہشتم</a><div class="meta">محبت اور آزمائش</div></div>
+      <div class="chapter-card"><a href="bab9.html">باب نہم</a><div class="meta">رشتوں کا فیصلہ</div></div>
+      <div class="chapter-card"><a href="bab10.html">باب دہم</a><div class="meta">ایک نئی زندگی</div></div>
+      <div class="chapter-card"><a href="bab11.html">باب یازدہم</a><div class="meta">ماں کی آخری دعا</div></div>
+      <div class="chapter-card"><a href="bab12.html">باب دوازدہم</a><div class="meta">لالچ کا جال</div></div>
+      <div class="chapter-card"><a href="bab13.html">باب سیزدہم</a><div class="meta">سچ کا سامنا</div></div>
+      <div class="chapter-card"><a href="bab14.html">باب چہاردہم</a><div class="meta">مریم کا آخری سفر</div></div>
+      <div class="chapter-card"><a href="bab15.html">باب پندرہ</a><div class="meta">وہ چراغ جو بجھ گئے</div></div>
+    </main>
+  </div>
+</body>
+</html>

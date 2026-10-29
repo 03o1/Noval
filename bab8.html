@@ -1,0 +1,515 @@
+﻿
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مٹی کے چراغ | باب ہشتم: محبت اور آزمائش</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#153d32;
+  --deep:#0b241e;
+  --gold:#d7b66c;
+  --cream:#fffaf0;
+  --ink:#293c33;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#e8e6dc;
+  color:var(--ink);
+  font-family:'Noto Nastaliq Urdu',serif;
+  line-height:2.5;
+}
+button{font-family:inherit;cursor:pointer}
+.hero{
+  min-height:590px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:60px 20px;
+  text-align:center;
+  color:white;
+  background:
+    linear-gradient(180deg,rgba(5,28,20,.35),rgba(5,28,20,.88)),
+    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=2000&q=90')
+    center/cover;
+}
+.hero-content{
+  max-width:850px;
+  padding:35px 25px;
+  border:1px solid rgba(231,202,139,.75);
+  background:rgba(8,35,26,.30);
+  backdrop-filter:blur(2px);
+}
+.eyebrow{
+  color:#f2d99c;
+  letter-spacing:2px;
+  font-size:16px;
+}
+.hero h1{
+  font-size:clamp(42px,8vw,76px);
+  line-height:1.8;
+  margin:5px 0;
+  color:#fff8e8;
+  text-shadow:0 3px 20px #0008;
+}
+.hero h2{
+  font-size:clamp(21px,4vw,30px);
+  color:#f1d69a;
+  font-weight:normal;
+  margin:0 0 22px;
+}
+.hero p{
+  text-align:center;
+  max-width:650px;
+  margin:auto;
+  font-size:17px;
+}
+.ornament{
+  color:var(--gold);
+  font-size:27px;
+  letter-spacing:9px;
+  margin:10px 0;
+}
+.toolbar{
+  position:sticky;
+  top:0;
+  z-index:5;
+  background:rgba(11,36,30,.97);
+  padding:12px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  box-shadow:0 4px 15px #0002;
+}
+.toolbar button{
+  border:1px solid var(--gold);
+  border-radius:30px;
+  background:transparent;
+  color:#fff7e6;
+  padding:7px 20px;
+  font-size:14px;
+  transition:.2s;
+}
+.toolbar button:hover{
+  background:var(--gold);
+  color:var(--deep);
+}
+main{
+  max-width:950px;
+  margin:35px auto;
+  padding:clamp(20px,5vw,65px);
+  background:var(--cream);
+  box-shadow:0 12px 45px #1c382a15;
+  border-top:5px solid var(--gold);
+}
+.chapter-label{
+  text-align:center;
+  color:#8b6a2d;
+  margin-bottom:22px;
+}
+.chapter-label span{
+  display:inline-block;
+  border-bottom:1px solid var(--gold);
+  padding:0 25px 10px;
+}
+.opening-quote{
+  text-align:center;
+  font-size:18px;
+  color:#456052;
+  padding:25px 22px;
+  margin:20px 0 38px;
+  background:linear-gradient(135deg,#f0f0e4,#faf3df);
+  border-right:4px solid var(--gold);
+  border-left:4px solid var(--gold);
+}
+h3{
+  font-size:25px;
+  line-height:2;
+  color:var(--green);
+  border-right:4px solid var(--gold);
+  padding-right:15px;
+  margin:48px 0 22px;
+}
+p{
+  font-size:17px;
+  text-align:justify;
+  margin:0 0 23px;
+}
+.photo{
+  margin:38px 0;
+  overflow:hidden;
+  border-radius:7px;
+  background:#eae5d6;
+  box-shadow:0 7px 24px #152f2415;
+}
+.photo img{
+  display:block;
+  width:100%;
+  max-height:460px;
+  object-fit:cover;
+  transition:transform .5s;
+}
+.photo:hover img{transform:scale(1.015)}
+.photo figcaption{
+  text-align:center;
+  padding:13px 16px;
+  color:#536457;
+  font-size:13px;
+}
+.flower-divider{
+  text-align:center;
+  color:#a78643;
+  font-size:25px;
+  letter-spacing:8px;
+  margin:35px 0;
+}
+.message{
+  margin:35px 0;
+  padding:20px 25px;
+  border-right:3px solid #78947e;
+  background:#edf1e8;
+  color:#344e40;
+}
+.message p{margin:0}
+.chapter-end{
+  text-align:center;
+  padding:45px 22px;
+  margin-top:50px;
+  color:#fff8e8;
+  background:
+    linear-gradient(135deg,rgba(8,35,27,.95),rgba(24,70,52,.96)),
+    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80')
+    center/cover;
+  border:2px solid var(--gold);
+  outline:1px solid var(--gold);
+  outline-offset:-9px;
+}
+.chapter-end .small{color:#e4c987}
+.chapter-end h2{
+  font-size:38px;
+  line-height:1.9;
+  margin:5px 0 12px;
+}
+.chapter-end p{text-align:center}
+.chapter-end .last{
+  color:#f0d79b;
+  margin-top:15px;
+}
+footer{
+  text-align:center;
+  padding:28px 15px;
+  background:var(--deep);
+  color:#eee4ca;
+  font-size:14px;
+}
+@media(max-width:600px){
+  .hero{min-height:480px;padding:25px 14px}
+  .hero-content{padding:25px 16px}
+  main{margin:15px 9px;padding:22px 17px}
+  p{font-size:16px}
+  h3{font-size:22px}
+}
+@media print{
+  body{background:white}
+  .toolbar{display:none}
+  main{margin:0;max-width:none;box-shadow:none;padding:20px}
+  .hero{min-height:350px;break-after:avoid}
+  .photo{break-inside:avoid}
+  .chapter-end{
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">ایک اردو سماجی ناول</div>
+    <div class="ornament">❀ ✿ ❀</div>
+    <h1>مٹی کے چراغ</h1>
+    <h2>باب ہشتم: محبت اور آزمائش</h2>
+    <p>
+      محبت دل کو روشنی دیتی ہے، مگر زندگی کے کچھ اندھیرے
+      ایسے ہوتے ہیں جن کا سامنا کرنے کے لیے صرف محبت نہیں،
+      حوصلہ اور سچائی بھی ضروری ہوتے ہیں۔
+    </p>
+    <div class="ornament">❀ ✿ ❀</div>
+  </div>
+</header>
+
+<nav class="toolbar">
+  <button onclick="window.print()">پرنٹ / PDF محفوظ کریں</button>
+  <button onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">کہانی پڑھیں ↓</button>
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})">واپس اوپر ↑</button>
+</nav>
+
+<main id="story">
+
+<div class="chapter-label">
+  <span>باب ہشتم</span>
+</div>
+
+<div class="opening-quote">
+  بعض محبتیں انسان کو جینے کا حوصلہ دیتی ہیں،
+  اور بعض آزمائشیں اسے بتاتی ہیں کہ سچائی کے راستے پر چلنا کتنا مشکل ہے۔
+</div>
+
+<p>
+شام ڈھل رہی تھی۔ روشن مستقبل اکیڈمی کے صحن میں لگے درختوں کے سائے لمبے ہو چکے تھے۔ بچے اپنے گھروں کو جا چکے تھے، مگر حمزہ ابھی تک کلاس روم میں بیٹھا کاپیاں دیکھ رہا تھا۔
+</p>
+
+<p>
+عائشہ دروازے پر آ کر رک گئی۔
+</p>
+
+<p>
+”آپ ہر روز سب سے آخر میں گھر جاتے ہیں؟“ اس نے مسکراتے ہوئے پوچھا۔
+</p>
+
+<p>
+حمزہ نے سر اٹھایا۔ ”شاید اس لیے کہ گھر پہنچ کر بھی ذمہ داریاں میرا انتظار کر رہی ہوتی ہیں۔“
+</p>
+
+<p>
+عائشہ چند لمحے خاموش رہی۔ پھر اس نے ایک کرسی کھینچ کر اس کے قریب رکھ دی۔
+</p>
+
+<p>
+”اور اگر کبھی کوئی آپ سے کہے کہ ہر ذمہ داری اکیلے اٹھانا ضروری نہیں، تو؟“
+</p>
+
+<p>
+حمزہ ہلکا سا مسکرایا۔ ”تو شاید پہلی بار اسے یقین کرنے میں وقت لگے گا۔“
+</p>
+
+<p>
+عائشہ نے اس کی آنکھوں میں دیکھتے ہوئے کہا، ”وقت لے لیجیے، لیکن ہر اچھی بات پر شک کرنا بھی ضروری نہیں ہوتا۔“
+</p>
+
+<p>
+اس ایک جملے نے حمزہ کے دل میں بہت سی خاموش باتیں جگا دیں۔ وہ عائشہ کو پسند کرنے لگا تھا، مگر اسے ڈر تھا کہ کہیں محبت اس کی زندگی کی مشکلات میں ایک نئی پریشانی نہ بن جائے۔ اس کے پاس نہ دولت تھی، نہ بڑے وعدے کرنے کی طاقت۔ اس کے پاس صرف محنت، سچائی اور ایک ایسا دل تھا جو دوسروں کے دکھ کو اپنا سمجھتا تھا۔
+</p>
+
+<p>
+”عائشہ، میں آپ سے ایک بات کہنا چاہتا ہوں،“ اس نے بالآخر کہا۔
+</p>
+
+<p>
+عائشہ کی مسکراہٹ مدھم ہوئی، مگر اس کی آنکھوں میں امید باقی رہی۔ ”کہیے۔“
+</p>
+
+<p>
+”میری زندگی آسان نہیں ہے۔ میں آپ کو بڑے خواب دکھا سکتا ہوں، لیکن ابھی یہ بھی نہیں جانتا کہ اگلے مہینے گھر کے اخراجات کیسے پورے ہوں گے۔“
+</p>
+
+<p>
+عائشہ نے آہستہ سے جواب دیا، ”میں نے آپ سے دولت کا وعدہ نہیں مانگا، حمزہ۔ میں صرف یہ دیکھنا چاہتی ہوں کہ مشکل وقت میں آپ اپنے اصول نہیں چھوڑتے۔“
+</p>
+
+<p>
+حمزہ پہلی بار اپنے جذبات کو چھپانے میں ناکام رہا۔ ”شاید اسی لیے آپ مجھے دوسروں سے مختلف لگتی ہیں۔“
+</p>
+
+<p>
+عائشہ نے نظریں جھکا لیں۔ ان دونوں کے درمیان کوئی بڑا وعدہ نہیں ہوا، مگر خاموشی نے وہ بات کہہ دی جسے زبان پر لانے کی ہمت ابھی دونوں میں نہیں تھی۔
+</p>
+
+<figure class="photo">
+  <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=90"
+       alt="خوبصورت پھول اور کھلتی ہوئی کلیاں" loading="lazy">
+  <figcaption>پھولوں کی طرح کچھ احساسات بھی آہستہ آہستہ دل میں کھلتے ہیں۔</figcaption>
+</figure>
+
+<div class="flower-divider">❀ ✿ ❀</div>
+
+<h3>مریم کو حقیقت کی پہلی جھلک</h3>
+
+<p>
+دوسری طرف مریم اپنی میڈیکل کی کتابیں کھولے بیٹھی تھی۔ اس کے سامنے امتحان کی تیاری تھی، لیکن ذہن بار بار حاجی بشیر کے رویے کی طرف چلا جاتا۔
+</p>
+
+<p>
+چند دن پہلے اس نے بشیر کے دفتر میں ایک لڑکی کو روتے ہوئے دیکھا تھا۔ لڑکی کہہ رہی تھی کہ اس نے رقم واپس کرنے کی کوشش کی، مگر اب اس سے مزید رقم اور خاموش رہنے کا مطالبہ کیا جا رہا تھا۔
+</p>
+
+<p>
+اس وقت مریم نے اس بات کو معمولی سمجھ کر نظرانداز کر دیا تھا۔ اب اسے وہ منظر بار بار یاد آ رہا تھا۔
+</p>
+
+<p>
+اگلے دن کالج میں اس کی ملاقات اپنی ایک ساتھی طالبہ، سدرہ، سے ہوئی۔ گفتگو کے دوران سدرہ نے بتایا کہ اس کے گھر والوں نے مالی مدد کے بدلے اس پر ایک بااثر شخص کی بات ماننے کے لیے دباؤ ڈالا تھا۔
+</p>
+
+<p>
+مریم کے دل میں خدشہ پیدا ہوا۔ ”سدرہ، کیا تم اس شخص کو پہچانتی ہو؟“
+</p>
+
+<p>
+سدرہ نے اردگرد دیکھا اور دھیمی آواز میں کہا، ”میں ابھی نام نہیں لینا چاہتی۔ مجھے ڈر ہے کہ اگر اسے معلوم ہو گیا تو میرے گھر والوں کے لیے مشکلات پیدا ہو سکتی ہیں۔“
+</p>
+
+<p>
+مریم نے اسے تسلی دی۔ ”تم پر کوئی دباؤ نہیں ڈالوں گی۔ لیکن اگر کبھی تمہیں مدد چاہیے ہو تو مجھے بتانا۔“
+</p>
+
+<p>
+اس دن مریم نے فیصلہ کیا کہ وہ اب ہر بات کو محض اتفاق سمجھ کر نظرانداز نہیں کرے گی۔ وہ اپنی تعلیم جاری رکھے گی، مگر ساتھ ہی یہ بھی سمجھے گی کہ اس کی مدد کے پیچھے اصل مقصد کیا ہے۔
+</p>
+
+<figure class="photo">
+  <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=1400&q=85"
+       alt="کتابیں اور مطالعے کا ماحول" loading="lazy">
+  <figcaption>علم مریم کا خواب تھا، اور اپنے فیصلے خود کرنا اس کا حق۔</figcaption>
+</figure>
+
+<h3>احسان کی قیمت</h3>
+
+<p>
+اسی شام حاجی بشیر نے مریم کو فون کیا۔
+</p>
+
+<p>
+”بیٹی، کل میرے دفتر آ جانا۔ تمہارے مستقبل کے بارے میں ایک اہم بات کرنی ہے۔“
+</p>
+
+<p>
+مریم نے پوچھا، ”کیا بات فون پر نہیں ہو سکتی؟“
+</p>
+
+<p>
+بشیر کی آواز میں سختی آ گئی۔ ”میں تمہاری اتنی مدد کر رہا ہوں اور تم مجھ سے سوالات کر رہی ہو؟“
+</p>
+
+<p>
+مریم چند لمحے خاموش رہی۔ ”میں آپ کی مدد کی قدر کرتی ہوں، لیکن اس کا مطلب یہ نہیں کہ میں ہر بات بغیر سمجھے مان لوں۔“
+</p>
+
+<p>
+بشیر نے فون بند کر دیا۔
+</p>
+
+<p>
+اس کے چہرے پر غصہ نمایاں تھا۔ وہ انکار سننے کا عادی نہیں تھا۔ اسے یقین تھا کہ پیسہ ہر انسان کو آخرکار جھکا دیتا ہے۔ مریم کی خودمختاری اس کے لیے صرف نافرمانی نہیں، بلکہ اس کے اثر و رسوخ کے لیے ایک چیلنج بن چکی تھی۔
+</p>
+
+<p>
+اس نے اپنے ایک قابلِ اعتماد آدمی کو بلایا۔
+</p>
+
+<p>
+”اس لڑکی کے بارے میں سب معلومات جمع کرو۔ اس کے دوست، اس کے گھر والے، اس کے کالج کے معاملات—سب کچھ۔“
+</p>
+
+<p>
+آدمی نے پوچھا، ”اور اگر وہ پھر بھی نہ مانی؟“
+</p>
+
+<p>
+بشیر نے بےرحمی سے جواب دیا، ”تو اسے احساس دلاؤ کہ معاشرے میں صرف سچ جاننا کافی نہیں ہوتا۔ کبھی کبھی سچ بولنے والے کو بھی اپنی عزت کی فکر کرنی پڑتی ہے۔“
+</p>
+
+<div class="message">
+  <p>مریم ابھی حقیقت کی صرف ایک جھلک دیکھ پائی تھی۔ اسے معلوم نہیں تھا کہ اس کے سامنے کھڑا شخص اس کی آزادی کو اپنے احسان کا قرض سمجھنے لگا ہے۔</p>
+</div>
+
+<h3>ایک وعدہ</h3>
+
+<p>
+اگلی شام حمزہ اور عائشہ اکیڈمی کے باہر ملے۔ موسم خوشگوار تھا، لیکن حمزہ کے چہرے پر پریشانی صاف دکھائی دے رہی تھی۔
+</p>
+
+<p>
+عائشہ نے پوچھا، ”مریم خیریت سے ہے؟“
+</p>
+
+<p>
+”وہ ٹھیک ہے، مگر مجھے حاجی بشیر کے بارے میں کچھ اچھا محسوس نہیں ہو رہا۔ اس کی مدد کے پیچھے کوئی ایسا مقصد ہے جسے ہم ابھی پوری طرح سمجھ نہیں سکے۔“
+</p>
+
+<p>
+عائشہ نے سنجیدگی سے کہا، ”پھر ہمیں جلد بازی کے بجائے سمجھ داری سے کام لینا ہوگا۔ مریم کو تنہا نہیں چھوڑنا چاہیے۔“
+</p>
+
+<p>
+حمزہ نے سر ہلایا۔
+</p>
+
+<p>
+کچھ دیر بعد اس نے عائشہ سے کہا، ”میں نہیں جانتا کہ مستقبل ہمارے لیے کیا لے کر آئے گا، لیکن ایک بات جانتا ہوں۔ اگر کبھی زندگی نے مجھے کسی کا ساتھ دینے کا موقع دیا، تو میں اسے کمزوری نہیں سمجھوں گا۔“
+</p>
+
+<p>
+عائشہ کی آنکھوں میں نمی سی اتر آئی۔ ”اور میں بھی ایسے رشتے پر یقین رکھتی ہوں جس میں محبت کے ساتھ عزت بھی ہو۔“
+</p>
+
+<p>
+حمزہ نے پہلی بار محسوس کیا کہ شاید زندگی میں ہر خواب دولت سے پورا نہیں ہوتا۔ کچھ خواب اعتماد سے بھی جنم لیتے ہیں۔
+</p>
+
+<figure class="photo">
+  <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1400&q=85"
+       alt="قدرتی منظر میں پھولوں کی خوبصورتی" loading="lazy">
+  <figcaption>امید کے چھوٹے چھوٹے چراغ اندھیروں میں بھی راستہ دکھاتے ہیں۔</figcaption>
+</figure>
+
+<h3>دھمکی</h3>
+
+<p>
+اسی وقت حمزہ کے فون پر ایک نامعلوم نمبر سے پیغام آیا:
+</p>
+
+<div class="message">
+  <p>”اپنے گھر کو سنبھالنے کی فکر کرو، حمزہ۔ دوسروں کے معاملات میں دخل دینا کبھی کبھی بہت مہنگا پڑتا ہے۔“</p>
+</div>
+
+<p>
+حمزہ کے چہرے کی مسکراہٹ غائب ہو گئی۔ عائشہ نے پیغام پڑھا تو اس کے چہرے پر بھی تشویش پھیل گئی۔
+</p>
+
+<p>
+یہ محض دھمکی تھی یا کسی آنے والے طوفان کا پہلا اشارہ؟
+</p>
+
+<p>
+حمزہ نے فون بند کیا اور عائشہ سے کہا، ”اب ہمیں محتاط رہنا ہوگا۔“
+</p>
+
+<p>
+اسے اندازہ نہیں تھا کہ حاجی بشیر صرف مریم کو اپنے قابو میں رکھنے کی کوشش نہیں کر رہا تھا۔ اب وہ حمزہ کی زندگی میں بھی خوف اور بےیقینی داخل کرنا چاہتا تھا۔
+</p>
+
+<p>
+دوسری طرف مریم نے بھی خاموش رہنے کے بجائے حقیقت تک پہنچنے کا فیصلہ کر لیا تھا۔ وہ جانتی تھی کہ یہ راستہ آسان نہیں ہوگا، مگر اس کا خواب کسی کے خوف سے چھوٹا نہیں ہو سکتا تھا۔
+</p>
+
+<section class="chapter-end">
+  <div class="small">❀ مٹی کے چراغ ❀</div>
+  <h2>جاری ہے۔۔۔</h2>
+  <p>محبت نے دلوں میں جگہ بنا لی تھی، مگر آزمائش ابھی ختم نہیں ہوئی تھی۔</p>
+  <p class="last">اگلا باب: رشتوں کا فیصلہ</p>
+</section>
+
+</main>
+
+<footer>
+  مٹی کے چراغ — ایک اردو سماجی ناول
+  <br>
+  محبت، سچائی اور انسانی وقار کی کہانی
+</footer>
+
+<div class="chapter-nav" style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin:28px 0 18px; text-align:center;">
+  <a href="bab1.html" style="display:inline-block; padding:10px 18px; background:#176b45; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;">مرکزی صفحہ</a>  <a href="bab7.html" style="display:inline-block; padding:10px 18px; background:#f0f0f0; color:#1e1e1e; border:1px solid #d5d5d5; border-radius:6px; text-decoration:none; font-weight:600;">پچھلا باب</a>  <a href="bab9.html" style="display:inline-block; padding:10px 18px; background:#176b45; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;">اگلا باب</a></div>
+</body>
+</html>
+
